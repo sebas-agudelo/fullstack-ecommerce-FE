@@ -1,0 +1,63 @@
+/* @import "tailwindcss"; */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+
+  /* font-size: 18px; */
+ 
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+     
+
+
+}
+
+.heading{
+    /* font-family: "Barlow Condensed", sans-serif;
+  font-style: normal;
+  letter-spacing: 0.2px; */
+  /* font-size: 18px; */
+}
+
+
+@layer utils {
+  /* Oculta la barra en Chrome, Safari y Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Oculta la barra en IE, Edge y Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE y Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+.home, .products, .menu, .cart{
+    @apply max-w-[1440px] mx-auto;
+}
+
+.buttons{
+  @apply font-bold w-full text-white block h-[53px] flex justify-center items-center rounded-3xl hover:shadow-sm hover:shadow-purple-950/50 hover:font-normal transition-all duration-150 ease-in
+}
+
+.buttons-bg{
+  @apply bg-purple-950 hover:bg-purple-800 transition-all duration-150 ease-in
+}
+
+
+/* .swiper-pagination{
+ @apply absolute bottom-[10%] -translate-y-[10%];
+ 
+} */
+
+body{
+    /* @apply max-w-[1440px] mx-auto; */
+}
