@@ -1,4 +1,4 @@
-import { getCustomerData, initializePayment, createGuest, getPaymentStatus, createCustomerOrder, orderDetailsblabla } from "../../services/checkout/checkoutServices";
+import { getCustomerData, initializePayment, createGuest, getPaymentStatus, createCustomerOrder, orderDetailsblabla, getOrderDetails } from "../../services/checkout/checkoutServices";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useUserCart } from "../Cart/useCartQueries";
 import { useContext } from "react";
