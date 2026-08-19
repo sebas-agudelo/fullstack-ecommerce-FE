@@ -23,7 +23,7 @@ export default function SignIn() {
   }
 
   return (
-    <main className="min-h-screen md:bg-purple-950 flex items-center">
+    <main className="min-h-dvh md:bg-purple-950 flex items-center">
       <div className="w-full min-h-full max-w-[430px] px-4 md:pb-12 md:px-12 mx-auto bg-white md:border md:rounded-lg">
 
         <div className="text-center">
