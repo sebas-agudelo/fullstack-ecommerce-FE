@@ -4,10 +4,6 @@ import { useEffect } from 'react'
 import { useGetProducts } from "../../hooks/products/useProducts";
 import { usePagination } from "../../hooks/usePagination";
 
-import ContentSpinner from "../../components/spinners/ContentSpinner";
-import { Pagination } from "./compoenents/Pagination";
-import { ProductsList } from "./compoenents/ProductsList";
-import { Footer } from "../../components/Footer/Footer";
 import { ProductsLayout } from "./compoenents/ProductsLayaout";
 
 

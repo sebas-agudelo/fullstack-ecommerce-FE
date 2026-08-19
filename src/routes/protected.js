@@ -1,5 +1,5 @@
 import { useSession } from "../hooks/auth/useAuth"
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Protected = ({ children }) => {
     const { data: session } = useSession();

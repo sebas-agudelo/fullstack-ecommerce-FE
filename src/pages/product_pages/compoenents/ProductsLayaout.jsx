@@ -2,7 +2,6 @@ import { ProductsList } from "./ProductsList"
 import { Pagination } from "./Pagination"
 import { Footer } from "../../../components/Footer/Footer"
 import ContentSpinner from "../../../components/spinners/ContentSpinner"
-import {MainErrors} from "../../../components/MainErrors"
 
 export const ProductsLayout = ({ data, page, urlPage, handlePageChange, pages, isLoading, isError, error }) => {
     return (

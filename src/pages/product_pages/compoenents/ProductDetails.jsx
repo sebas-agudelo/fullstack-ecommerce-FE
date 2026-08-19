@@ -4,9 +4,7 @@ import { useGetProductById } from "../../../hooks/products/useProducts";
 export const ProductDetails = () => {
     const {id} = useParams();
 
-    const {data: product, isLoading} = useGetProductById(id);
-
-    console.log("Produkten =>",product);
+    const {data: product} = useGetProductById(id);
 
     return (
         <div>

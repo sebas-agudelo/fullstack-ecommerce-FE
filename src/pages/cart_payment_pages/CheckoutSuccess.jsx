@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { useParams, useSearchParams, useNavigate, Link } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { useGetOrderDetails } from '../../hooks/checkout/useCheckout';
 

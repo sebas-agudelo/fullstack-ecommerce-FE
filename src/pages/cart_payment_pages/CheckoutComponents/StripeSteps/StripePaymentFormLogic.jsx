@@ -11,7 +11,6 @@ const StripePaymentFormLogic = ({ handlePagar, setErrors }) => {
   const stripe = useStripe();
   const elements = useElements();
 
-  const [message, setMessage] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isFormComplete, setIsFormComplete] = useState(false);
   const { total_price } = useContext(CartContext);

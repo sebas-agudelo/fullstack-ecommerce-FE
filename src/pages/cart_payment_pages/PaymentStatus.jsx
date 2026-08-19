@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { useParams, useSearchParams, useNavigate, Link } from "react-router-dom";
-import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import React, { useContext, useEffect } from 'react'
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { useGetPaymentStatus } from '../../hooks/checkout/useCheckout';
 import ContentSpinner from '../../components/spinners/ContentSpinner';
 import { TiWarningOutline } from "react-icons/ti";
@@ -12,7 +11,7 @@ export default function PaymentStatus() {
   const nav = useNavigate()
 
   const payment_intent = searhParams.get("payment_intent")
-  const payment_intent_client_secret = searhParams.get("payment_intent_client_secret")
+  // const payment_intent_client_secret = searhParams.get("payment_intent_client_secret")
 
   const { data, isLoading } = useGetPaymentStatus(payment_intent)
   const {cart} = useContext(CartContext);

@@ -9,7 +9,7 @@ import { StripePaymentSection } from "./StripePaymentSection";
 export const StripePaymentStep = ({
     costumer, setErrors
 }) => {
-    const { mutate: initializePayment, isPending } = useInitializePayment();
+    const { mutate: initializePayment } = useInitializePayment();
     const { mutate: createCustomerOrder } = useCreateCostumerOrder();
 
     const { cart } = useContext(CartContext);
