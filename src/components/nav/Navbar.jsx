@@ -32,7 +32,7 @@ export default function Navbar() {
                 <NavbarMenu />
                 <Logo />
               </div>
-              
+
               {!hiddenSearchBar && (
                 <div className="hidden lg:block w-[55%]">
                   <Search />

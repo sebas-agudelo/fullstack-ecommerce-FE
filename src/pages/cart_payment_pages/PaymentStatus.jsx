@@ -14,7 +14,7 @@ export default function PaymentStatus() {
   // const payment_intent_client_secret = searhParams.get("payment_intent_client_secret")
 
   const { data, isLoading } = useGetPaymentStatus(payment_intent)
-  const {cart} = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function PaymentStatus() {
       localStorage.clear('cart')
       nav(`/success?ordernummer=${data?.order_id}`)
     }
-  }, [data, cart])
+  }, [data, cart, nav])
 
   return (
     <main className='pt-[35px] px-4 md:px-0'>
