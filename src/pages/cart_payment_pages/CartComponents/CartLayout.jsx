@@ -9,7 +9,7 @@ export const CartLayout = () => {
 
     return (
         <main className="max-w-5xl m-auto h-[calc(100dvh_-_78px)] md:h-[calc(100dvh_-_118px)] lg:h-[calc(100dvh_-_135px)] lg:px-6">
-            {userLoading || guestLoading && (
+            {(userLoading || guestLoading) && (
                 <div className="w-full text-center">
                     <ContentSpinner />
                 </div>

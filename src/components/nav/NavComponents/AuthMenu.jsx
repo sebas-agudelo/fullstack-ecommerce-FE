@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import { GoPerson } from "react-icons/go";
 import { useState, useEffect } from "react";
 
@@ -37,7 +35,7 @@ export const AuthMenu = ({ toggleMenu }) => {
                     <Signuot />
                 </>
                 :
-                <ul>
+                <ul className="text-[14.5px]">
                     {links.map((link) => (
                         <TailwindNav link={link.link} name={link.name} icon={isIcon} type={"auth"} toggleMenu={toggleMenu} />
                     ))}

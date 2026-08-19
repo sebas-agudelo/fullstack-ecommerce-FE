@@ -9,7 +9,7 @@ export default function SignIn() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { mutate, error, isSuccess, isPending } = useSignIn();
+  const { mutate, error, isSuccess } = useSignIn();
 
   const nav = useNavigate();
 

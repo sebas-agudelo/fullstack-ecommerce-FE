@@ -17,7 +17,7 @@ export const LatestProductCard = ({ product }) => {
                 </div>
                 <div className="absolute left-[15%] -translate-x-[15%] md:left-[5%] bottom-[5%] md:-translate-x-[5%] -translate-y-[5%]">
                     <p className="text-xs mb-1">{product.short_description}</p>
-                    <p className="text-[14px] font-bold">{product.title}</p>
+                    <p className="text-[14.5px] font-bold">{product.title}</p>
                 </div>
             </div>
         </Link>

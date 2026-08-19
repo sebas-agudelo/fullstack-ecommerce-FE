@@ -8,8 +8,6 @@ export const CartCosts = () => {
     const { tax } = useContext(CartContext);
         const location = useLocation();
 
-    const isCheckout = location.pathname === '/checkout';
-
     return (
              <div className="w-full flex flex-col">
                 <div className="flex justify-between mb-3 text-[14px]">

@@ -28,7 +28,7 @@ export const StripePaymentFormView = ({ PaymentElement, handleSubmit, isSubmitti
                     disabled={isFormComplete === false || !stripe || !elements} id="submit"
                     className={`buttons mt-6 ${isFormComplete ? "bg-purple-950" : "bg-gray-400"}`}
                 >
-                    {isSubmitting ? <ButtonSpinner /> : <div> Slutför order på <span className="text-[21px]">{formatPrice(total_price)} kr</span></div>}
+                    {isSubmitting ? <ButtonSpinner /> : <div> Slutför order på <span className="text-[18px] font-extrabold">{formatPrice(total_price)} kr</span></div>}
                 </button>
             </form>
             <p className="mt-2 text-[12px] text-center">Genom att klicka på <span className="font-semibold">'Slutför order'</span> godkänner du våra köpvillkor och vår integritetspolicy.</p>

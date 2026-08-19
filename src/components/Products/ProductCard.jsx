@@ -14,6 +14,7 @@ export const ProductCard = ({ product }) => {
                         <img
                             className="h-full w-full object-contain transition-transform duration-150 group-hover:scale-90 ease-in"
                             src={product.img}
+                            alt={product.title}
                         />
                     </div>
 
@@ -31,9 +32,9 @@ export const ProductCard = ({ product }) => {
 
                 <div className="px-4">
                     <p className="absolute top-[3%] left-[5%] translate-x-[3%] translate-y-[5%] text-[10px] font-medium text-gray-500">{product.category_name}</p>
-                    <p className="text-[12px] mt-6 text-gray-600 mb-3">{product.short_description}</p>
-                    <p className="text-[14px] font-bold mb-3">{product.title}</p>
-                    <ul className="pl-6">
+                    <p className="text-[12px] mt-6 text-gray-600">{product.short_description}</p>
+                    <p className="text-[14.5px] font-bold mb-4">{product.title}</p>
+                    <ul className="pl-4">
                         {
                             product?.product_properties_values?.map((pro) => (
                                 <li className="text-xs list-disc py-1 text-gray-600">{pro.value}</li>

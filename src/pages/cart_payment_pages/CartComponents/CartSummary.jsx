@@ -16,9 +16,9 @@ export const CartSummary = () => {
     const isCheckout = location.pathname === '/checkout';
 
     return (
-        <div className={`w-full h-auto ${isCheckout ? "h-auto flex flex-col lg-w-full justify-between mb-10 lg:mb-0" : "rounded-2xl top-[0%] -translate-y-[0%] lg:py-0 lg:sticky lg:h-[368px] flex flex-col lg:w-[35%] justify-center p-4"}`}>
+        <div className={`w-full h-auto ${isCheckout ? "h-auto flex flex-col lg-w-full justify-between mb-10 lg:mb-0" : "rounded-2xl top-[0%] -translate-y-[0%] lg:py-0 lg:sticky lg:h-[368px] flex flex-col lg:w-[35%] justify-center pb-4 px-4"}`}>
             <div className={`flex flex-col mb-6 ${!isCheckout && "hidden"} lg:block`}>
-                <p className="text-xl lg:text-[18px] font-bold mb-6">{isCheckout ? "Orderöversikt" : "Din varukorg"} ({items}x)</p>
+                <p className="text-[18px] font-bold mb-6">{isCheckout ? "Orderöversikt" : "Din varukorg"} ({items}x)</p>
                 <CartCosts />
             </div>
 

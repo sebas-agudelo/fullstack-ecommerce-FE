@@ -15,7 +15,7 @@ export const Latest = () => {
 
     return (
         <div className="relative bg-white px-4 md:px-4 h-auto mb-8 bg-red-500">
-            <h2 className="text-[23px] text-gray-800 pt-6 pb-3 lg:pt-10 lg:pb-3 lg:pl-2 font-extrabold">NYHETER</h2>
+            <h2 className="text-[22px] text-gray-800 pt-6 pb-3 lg:pt-10 lg:pb-3 lg:pl-2 font-extrabold">NYHETER</h2>
 
             {!isLoading && error && (<MainErrors errors={error?.message} />)}
 

@@ -1,4 +1,4 @@
-import { useSearchParams, useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 export const usePagination = () => {
     const [urlPage, setUrlPage] = useSearchParams();

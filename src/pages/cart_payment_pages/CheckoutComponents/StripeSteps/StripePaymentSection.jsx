@@ -13,7 +13,7 @@ export const StripePaymentSection = ({ clientSecret, options, stripePromise, han
 
             ) : (
 
-                <div className="border border-[2px] border-purple-900 rounded-md py-6 px-4 shadow-lg"><p>Betalningsalternativ visas när alla e obligatoriska stegen ovan är slutförda.</p></div>
+                <div className="text-[14.5px] border border-[2px] border-purple-900 rounded-md py-6 px-4 shadow-lg"><p>Betalningsalternativ visas när alla e obligatoriska stegen ovan är slutförda.</p></div>
             )}
         </div>
     )

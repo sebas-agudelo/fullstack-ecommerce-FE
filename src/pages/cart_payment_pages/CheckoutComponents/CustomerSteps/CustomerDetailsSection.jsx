@@ -15,7 +15,7 @@ export const CustomerDetailsSection = ({ handleSubmit, customerData, setCustomer
                         <FiCheckCircle className="text-green-600 text-4xl" />
                     </div>
 
-                    <div className="">
+                    <div className="text-[14.5px]">
                         <p>E-postadress: {costumer?.email}</p>
                         <p>Telefonnummer: {costumer?.phone}</p>
                     </div>

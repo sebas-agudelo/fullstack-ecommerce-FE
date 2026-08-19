@@ -3,7 +3,7 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 
 import { useState, useEffect } from "react";
 
-import { useCategories, useCategoriess } from '../../../hooks/useCategories';
+import { useCategories } from '../../../hooks/useCategories';
 import { AuthMenu } from "./AuthMenu";
 import { TailwindNav } from "./TailwindLinks";
 
@@ -46,7 +46,7 @@ export const NavLinks = ({ toggleMenu, isMenuOpen }) => {
                 <AiOutlineClose onClick={toggleMenu} className="text-white text-xl md:cursor-pointer" />
             </div>
 
-            <ul className="flex flex-col">
+            <ul className="flex flex-col text-[14.5px]">
                 {isCategoryOpen === null ? (
                     categories &&
                     categories.map((item) => (
