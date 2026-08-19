@@ -37,7 +37,7 @@ export const StripePaymentStep = ({
                 }
             })
         }
-    }, [costumer, cart, initializePayment])
+    }, [costumer, cart, initializePayment, setErrors])
 
     console.log("cliente secret: ",clientSecret);
     console.log("Payment id: ",paymentId);
