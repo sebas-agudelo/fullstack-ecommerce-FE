@@ -24,7 +24,7 @@ export default function SignIn() {
 
   return (
     <main className="min-h-dvh md:bg-purple-950 flex items-center">
-      <div className="w-full min-h-full max-w-[430px] px-4 md:pb-12 md:px-12 mx-auto bg-white md:border md:rounded-lg">
+      <div className="w-full min-h-full max-w-[390px] px-4 md:pb-12 md:px-12 mx-auto bg-white md:border md:rounded-lg">
 
         <div className="text-center">
           <div className="flex justify-center py-8 mb-8 border-b-[0.5px] border-purple-950">
@@ -33,7 +33,7 @@ export default function SignIn() {
 
           <div className="mb-12">
             <h1 className="text-[20px] mb-2">Logga in</h1>
-            <p className="text-[14px] text-center">Logga in med din e-postadress eller registrera dig</p>
+            <p className="text-[12px] text-center font-medium">Logga in med din e-postadress eller registrera dig</p>
           </div>
         </div>
 
