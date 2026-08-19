@@ -19,7 +19,7 @@ export const CustomerDetailsStep = ({
         if (costumer) {
             setCustomerData(costumer)
         }
-    }, [costumer])
+    }, [costumer, setCustomerData])
 
     const fieldErrors = {
         ...error?.msg,

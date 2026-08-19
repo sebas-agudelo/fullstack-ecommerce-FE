@@ -20,7 +20,7 @@ export const CheckoutPage = () => {
             setErrors(error.msg)
         }
         window.scrollTo({ top: 0, behavior: 'smooth' })
-    }, [errors])
+    }, [errors, error])
 
 
     return (
