@@ -26,7 +26,7 @@ export default function Navbar() {
         <nav className="w-full bg-white">
           <TopBar />
 
-          <div className="menu lg:h-[96px] flex flex-col justify-evenly px-4 lg:px-6 py-6 lg:py-0 shadow-sm">
+          <div className="menu lg:h-[96px] flex flex-col justify-evenly px-4 lg:px-8 py-6 lg:py-0 shadow-sm">
             <div className="flex justify-between items-center">
               <div className="flex items-center space-x-3 md:space-x-6">
                 <NavbarMenu />
@@ -43,7 +43,7 @@ export default function Navbar() {
 
             </div>
             {!hiddenSearchBar && (
-              <div className="lg:hidden w-full mt-4">
+              <div className="lg:hidden w-full mt-5">
                 <Search />
               </div>
             )}
