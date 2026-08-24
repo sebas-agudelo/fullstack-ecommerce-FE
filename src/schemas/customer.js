@@ -13,7 +13,7 @@ export const customerSchema = z.object({
     address: z
         .string()
         .trim()
-        .min(1, "Adress krävs"),
+        .min(2, "Adress krävs"),
 
     postal_code: z
         .string()
@@ -29,5 +29,5 @@ export const customerSchema = z.object({
     fullname: z
         .string()
         .trim()
-        .min(1, "För & efternamn krävs")
+        .min(2, "För & efternamn krävs")
 });

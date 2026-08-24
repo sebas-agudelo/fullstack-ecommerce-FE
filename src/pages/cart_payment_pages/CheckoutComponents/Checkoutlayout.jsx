@@ -6,16 +6,17 @@ import { CartSummary } from "../CartComponents/CartSummary"
 import { CustomerDetailsStep } from "../CheckoutComponents/CustomerSteps/CustomerDetailsStep"
 import { StripePaymentStep } from "../CheckoutComponents/StripeSteps/StripePaymentStep"
 import { MainErrors } from "../../../components/MainErrors";
+import ContentSpinner from "../../../components/spinners/ContentSpinner"
 
-export const CheckoutLayout = ({ customerData, setCustomerData, costumer, refetch, setErrors, errors }) => {
+export const CheckoutLayout = ({ customerData, setCustomerData, costumer, refetch, setErrors, errors, isLoading }) => {
     const [isOrderSummaryOpen, setIsOrderSummaryOpen] = useState(false)
 
     return (
         <div className="max-w-5xl m-auto pt-6 px-4 relative">
             <CheckoutHeader />
 
-            <MainErrors errors={errors}/>
-      
+            <MainErrors errors={errors} />
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-14 items-start">
                 <div className={`w-full lg:col-span-8 rounded-lg shadow-md bg-gray-50 mb-10`}>
                     <CheckoutOrderSummary isOrderSummaryOpen={isOrderSummaryOpen} setIsOrderSummaryOpen={setIsOrderSummaryOpen} />
@@ -26,13 +27,17 @@ export const CheckoutLayout = ({ customerData, setCustomerData, costumer, refetc
                 </div>
 
                 <div className="lg:col-span-8 mb-10">
-                    <CustomerDetailsStep
-                        customerData={customerData}
-                        setCustomerData={setCustomerData}
-                        costumer={costumer}
-                        refetch={refetch}
-                        setErrors={setErrors}
-                    />
+                    {isLoading ? (
+                        <ContentSpinner />
+                    ) : (
+                        <CustomerDetailsStep
+                            customerData={customerData}
+                            setCustomerData={setCustomerData}
+                            costumer={costumer}
+                            refetch={refetch}
+                            setErrors={setErrors}
+                        />
+                    )}
                 </div>
 
                 <div className="lg:col-span-8 pb-6">

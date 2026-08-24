@@ -9,7 +9,7 @@ export default function SignIn() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { mutate, error, isSuccess } = useSignIn();
+  const { mutate, error, isSuccess, isPending } = useSignIn();
 
   const nav = useNavigate();
 
@@ -43,10 +43,13 @@ export default function SignIn() {
         }
         <SignForm
           handleSubmit={handleSubmit}
+          email={email}
           setEmail={setEmail}
+          password={password}
           setPassword={setPassword}
           btn={"Logga in"}
           error={error}
+          isPending={isPending}
         />
 
         <div className="text-center">

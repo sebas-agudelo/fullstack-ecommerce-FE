@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
+import ButtonSpinner from "../../../components/spinners/ButtonSpinner";
 
-export const SignForm = ({ handleSubmit, setEmail, setPassword, btn, error, isPending }) => {
+export const SignForm = ({ handleSubmit, email, setEmail, password, setPassword, btn, error, isPending }) => {
     return (
         <form onSubmit={handleSubmit} className="mb-5">
             <div className="flex flex-col mb-6">
@@ -23,8 +24,10 @@ export const SignForm = ({ handleSubmit, setEmail, setPassword, btn, error, isPe
 
             <div className="w-full">
 
-                <button className="buttons buttons-bg"
-                    disabled={isPending}> {btn} </button>
+                <button className={`buttons ${password.length === 0 || email.length === 0 ? "bg-gray-400" : "buttons-bg "}`}
+                    disabled={
+                email.length === 0 || password.length === 0  ||
+                    isPending}> {isPending ? <ButtonSpinner /> : btn} </button>
             </div>
         </form>
     )

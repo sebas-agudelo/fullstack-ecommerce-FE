@@ -2,7 +2,15 @@ import { CustomerDetailsForm } from "./CustomerDetailsForm"
 
 import { FiCheckCircle } from "react-icons/fi";
 
-export const CustomerDetailsSection = ({ handleSubmit, customerData, setCustomerData, isPending, errors, costumer }) => {
+export const CustomerDetailsSection = ({
+    handleSubmit,
+    customerData,
+    setCustomerData,
+    isPending,
+    errors,
+    costumer,
+    clearFieldError
+}) => {
     return (
         <div className="lg:w-full mb-0 lg:mb-0">
             <div className="mb-2">
@@ -30,6 +38,7 @@ export const CustomerDetailsSection = ({ handleSubmit, customerData, setCustomer
                         setCustomerData={setCustomerData}
                         isPending={isPending}
                         errors={errors}
+                        clearFieldError={clearFieldError}
                     />
                 </div>
             }

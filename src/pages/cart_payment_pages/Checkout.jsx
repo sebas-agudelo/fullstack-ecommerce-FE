@@ -4,7 +4,7 @@ import { CheckoutLayout } from "./CheckoutComponents/Checkoutlayout"
 import { useGetCustomer } from "../../hooks/auth/useCustomer"
 
 export const CheckoutPage = () => {
-    const { data: costumer, error, refetch } = useGetCustomer()
+    const { data: costumer, error, refetch, isLoading } = useGetCustomer()
 
     const [errors, setErrors] = useState(null)
     const [customerData, setCustomerData] = useState({
@@ -20,7 +20,7 @@ export const CheckoutPage = () => {
             setErrors(error.msg)
         }
         window.scrollTo({ top: 0, behavior: 'smooth' })
-    }, [errors, error])
+    }, [errors, error, setErrors])
 
 
     return (
@@ -31,6 +31,7 @@ export const CheckoutPage = () => {
                 refetch={refetch}
                 setErrors={setErrors}
                 errors={errors}
+                isLoading={isLoading}
             />
     )
 }

@@ -26,6 +26,25 @@ font-family: "Concert One", sans-serif;
   font-style: normal;
 }
 
+/* .swiper-pagination{
+  @apply absolute top-[50%] -translate-y-[50%]
+  
+} */
+
+.swiper-pagination-bullet{
+  @apply bg-purple-950 w-[12px] h-[12px]
+}
+
+/* .swiper-button-next, .swiper-navigation-icon{
+  @apply text-purple-950 w-[15px]
+}
+
+.swiper-button-prev, .swiper-navigation-icon{
+  @apply text-purple-950 w-[15px]
+} */
+
+
+
 
 @layer utils {
   /* Oculta la barra en Chrome, Safari y Opera */

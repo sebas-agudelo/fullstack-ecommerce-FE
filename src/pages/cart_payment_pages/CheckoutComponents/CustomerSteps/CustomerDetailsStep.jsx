@@ -12,7 +12,7 @@ export const CustomerDetailsStep = ({
     setErrors
 }) => {
     const [clientErrors, setClientErrors] = useState(null);
-    const { validate } = useCustomerValidation(customerData); 
+    const { validate } = useCustomerValidation(customerData);
     const { mutate, isPending, error } = useCreateGuest();
 
     useEffect(() => {
@@ -24,6 +24,31 @@ export const CustomerDetailsStep = ({
     const fieldErrors = {
         ...error?.msg,
         ...clientErrors
+    }
+
+    const clearFieldError = (mmm, value) => {
+        console.log("Name: ",value);
+        
+        if (value?.length > 0) {
+            setClientErrors(prev => ({
+                ...prev,
+                [mmm]: null
+            }))
+        }
+
+        if (value.length <= 0) {
+            const errors = validate()
+            if (errors) {
+                setClientErrors(prev => ({
+                    ...prev,
+                    [mmm]: errors[mmm]
+                }))
+                return
+            };
+        }
+
+        console.log("error: ",value);
+
     }
 
     const handleSubmit = async (e) => {
@@ -58,6 +83,7 @@ export const CustomerDetailsStep = ({
             isPending={isPending}
             errors={fieldErrors}
             costumer={costumer}
+            clearFieldError={clearFieldError}
         />
     )
 }
