@@ -42,7 +42,7 @@ const StripePaymentFormLogic = ({ handlePagar, setErrors }) => {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: "http://localhost:3000/confirm",
+        return_url: "https://fullstack-ecommerce-fe-kfwe.vercel.app/confirm",
       },
     });
 
