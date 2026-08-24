@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const LatestProductCard = ({ product }) => {
     return (
-        <Link to={`/product/${product?.id}`}>
+        <Link to={``}>
             <div className="h-[300px] md:h-[400px] w-full rounded-2xl border relative">
                 <p className="absolute text-[10px] font-medium top-[5%] left-[5%] -translate-x-[5%] -translate-y-[5%] text-gray-600">{product.category_name}</p>
                 <div className="h-[230px] md:h-[300px] w-full overflow-hidden relative">
