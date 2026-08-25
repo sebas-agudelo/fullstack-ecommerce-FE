@@ -15,8 +15,6 @@ import 'swiper/css/free-mode';
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
 
-import { GoArrowLeft } from "react-icons/go";
-import { GoArrowRight } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsBagCheck } from "react-icons/bs";
