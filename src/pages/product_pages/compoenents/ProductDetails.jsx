@@ -22,10 +22,6 @@ import { MdOutlineSettingsBackupRestore } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 
-
-
-
-
 export const ProductDetails = () => {
     const { id } = useParams();
 
@@ -71,8 +67,6 @@ export const ProductDetails = () => {
                         <div className="h-auto">
                             <p className="text-[27px] font-extrabold pb-6 truncate">{product?.data.title}</p>
                             <div className="h-[520px] relative mb-12">
-                                {/* <p className="text-[14px] text-gray-500 font-extrabold absolute top-[1%] -translate-y-[1%] left-[2%] -translate-x-[2%]">{product?.data?.brand}</p> */}
-
                                 {
                                     product?.data?.product_images?.length > 1 && (
                                         <>

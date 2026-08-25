@@ -32,8 +32,8 @@ export const ProductCard = ({ product }) => {
 
                 <div className="px-4">
                     <p className="absolute top-[3%] left-[5%] translate-x-[3%] translate-y-[5%] text-[10px] font-medium text-gray-500">{product.category_name}</p>
-                    <p className="text-[12px] mt-6 text-gray-600 truncate">{product.short_description}</p>
-                    <p className="text-[14.5px] font-bold mb-4 truncate">{product.title}</p>
+                    <p className="text-[12px] mt-6 mb-1 text-gray-600 truncate pr-6">{product.short_description}</p>
+                    <p className="text-[14.5px] font-bold mb-4 truncate pr-6">{product.title}</p>
                     <ul className="pl-4">
                         {
                             product?.product_properties_values?.map((pro) => (

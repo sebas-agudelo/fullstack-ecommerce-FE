@@ -15,7 +15,7 @@ export const LatestProductCard = ({ product }) => {
                     </div>
 
                 </div>
-                <div className="w-full absolute px-3 bottom-[5%] -translate-y-[5%]">
+                <div className="w-full absolute px-6 bottom-[5%] -translate-y-[5%]">
                     <p className="text-xs mb-1 truncate overflow-hidden">{product.short_description}</p>
                     <p className="text-[14.5px] font-bold truncate overflow-hidden">{product.title}</p>
                 </div>
