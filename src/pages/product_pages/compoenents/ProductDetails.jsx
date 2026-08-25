@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useGetProductById } from "../../../hooks/products/useProducts";
 import { useAddCartItem } from "../../../hooks/Cart/useAddCartItem";
 import { formatPrice } from "../../../utils/formatPrice";
@@ -67,20 +67,22 @@ export const ProductDetails = () => {
 
     return (
         <div className="max-w-[1440px] m-auto pt-8">
-            <div className="px-12">
-                <div className="flex">
-                    <div className="lg:w-[68%] pr-16">
+            <div className="px-[80px] mb-6">
+                <div className="flex pb-8">
+                    <div className="lg:w-[63%] pr-6">
                         <div className="h-auto">
-                            <div className="h-[560px] relative">
-                                <p className="text-[14px] font-medium absolute right-[0%] -translate-x-[0%] h-[22px] w-[55px] bg-gray-100 flex justify-center items-center rounded-lg">{currentImage} / {product?.data.product_images.length > 0 && (product?.data.product_images.length)}</p>
+                            <p className="text-[27px] font-extrabold pb-6 truncate">{product?.data.title}</p>
+                            <div className="h-[520px] relative mb-12">
+                                {/* <p className="text-[14px] text-gray-500 font-extrabold absolute top-[1%] -translate-y-[1%] left-[2%] -translate-x-[2%]">{product?.data?.brand}</p> */}
+
                                 {
                                     product?.data?.product_images?.length > 1 && (
                                         <>
-                                            <button className={`swiper-button-prev-custom lg:flex justify-center items-center h-[50px] w-[50px] hover:shadow-lg hover:rounded-[50%] absolute left-[8%] -translate-x-[8%] top-1/2 -translate-y-1/2 ${isModalOpen ? "hidden" : "z-10"}`}>
+                                            <button className={`swiper-button-prev-custom lg:flex justify-center items-center h-[50px] w-[50px] hover:shadow-lg hover:rounded-[50%] absolute left-[2%] -translate-x-[2%] top-1/2 -translate-y-1/2 ${isModalOpen ? "hidden" : "z-10"}`}>
                                                 <IoIosArrowBack className="text-[30px] text-purple-950" />
                                             </button>
 
-                                            <button className={`swiper-button-next-custom lg:flex justify-center items-center h-[50px] w-[50px] hover:shadow-lg hover:rounded-[50%] absolute left-[92%] -translate-x-[92%] !important top-1/2 -translate-y-1/2 ${isModalOpen ? "hidden" : "z-10"}`}>
+                                            <button className={`swiper-button-next-custom lg:flex justify-center items-center h-[50px] w-[50px] hover:shadow-lg hover:rounded-[50%] absolute left-[98%] -translate-x-[98%] !important top-1/2 -translate-y-1/2 ${isModalOpen ? "hidden" : "z-10"}`}>
                                                 <IoIosArrowForward className="text-[30px] text-purple-950" />
                                             </button>
                                         </>
@@ -115,7 +117,7 @@ export const ProductDetails = () => {
 
                                                     >
                                                         <img src={image.img} alt=""
-                                                            className="w-[70%] h-[90%] object-contain" />
+                                                            className="w-[80%] h-[90%] object-contain" />
                                                     </SwiperSlide>
                                                 ))
                                             }
@@ -128,20 +130,25 @@ export const ProductDetails = () => {
                                 }
                             </div>
 
-                            <div className="flex gap-12">
+                            <div className="w-[50%]">
                                 <div>
-                                    <h2 className="font-bold">Kort om produkten</h2>
+                                    <h2 className="text-[18px] font-extrabold mb-3">Kort om produkten</h2>
                                     <p>{product?.data?.short_description ? product?.data?.short_description : "-"}</p>
+                                    <Link
+                                        to="#description"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            setSections(prev => ({ ...prev, description: true }))
+                                            document.getElementById("description")?.scrollIntoView({
+                                                behavior: "smooth",
+                                                block: "start"
+                                            });
+                                        }}
+                                    >
+                                        Visa mer
+                                    </Link>
+
                                 </div>
-
-                                {/* <div>
-                                    <h2 className="font-bold">Teknisk specifikation</h2>
-                                    {product?.data?.product_properties_values.slice(0, 3).map((v) => (
-                                        <p>{v.value}</p>
-                                    ))}
-
-                                    <button className="font-bold">Se alla specifikationer</button>
-                                </div> */}
                             </div>
 
 
@@ -166,11 +173,11 @@ export const ProductDetails = () => {
                                                 product?.data?.product_images?.length > 1 && (
                                                     <>
                                                         <button className={`swiper-button-prev-custom bg-purple-950 hidden lg:flex justify-center items-center h-[50px] w-[50px] shadow-md rounded-[50%] absolute left-[20%] -translate-x-[20%] top-1/2 -translate-y-1/2 z-10`}>
-                                                            <GoArrowLeft className="text-[22px] text-white" />
+                                                            <IoIosArrowBack className="text-[22px] text-white" />
                                                         </button>
 
                                                         <button className={`swiper-button-next-custom bg-purple-950 hidden lg:flex justify-center items-center h-[50px] w-[50px] shadow-md rounded-[50%] absolute left-[80%] -translate-x-[80%] !important top-1/2 -translate-y-1/2 z-10`}>
-                                                            <GoArrowRight className="text-[22px] text-white" />
+                                                            <IoIosArrowForward className="text-[22px] text-white" />
                                                         </button>
                                                     </>
                                                 )
@@ -211,43 +218,53 @@ export const ProductDetails = () => {
 
                     </div>
 
-                    <div className="lg:w-[32%]">
-                        <div className="bg-gray-50 rounded-lg shadow-sm border-[0.5px] py-4 px-6">
-                            <div className="mb-8">
-                                <p className="text-[20px] font-bold">{product?.data.title}</p>
-                                {/* <p className="text-[14px]">{product?.data.brand}</p> */}
-                                <p className="text-[14px]">{product?.data?.short_description}</p>
+                    <div className="lg:w-[37%]">
+                        <div className="bg-gray-50 rounded-lg shadow-sm border-[0.5px] pt-1 pb-6 px-6">
+                            {/* <p className="text-[12px] text-gray-500">{product?.data?.brand}</p> */}
+                            <p className="text-[34px] font-extrabold mb-6">{formatPrice(product?.data.price)}:-</p>
+                            <div className="mb-3 line-clamp-2 overflow-hidden text-gray-700">
+                                <p className="font-medium">{product?.data?.short_description}</p>
                             </div>
 
-                            <p className="text-[34px] font-extrabold mb-6">{formatPrice(product?.data.price)}:-</p>
 
-                            <div>
+                            <div className="mb-8">
                                 <button
                                     onClick={(e) => {
                                         e.preventDefault()
                                         add(1, product?.data)
                                     }}
-                                    className="buttons buttons-bg"
+                                    className="buttons buttons-bg mb-3"
                                 >Lägg i varukorgen</button>
 
                                 <div className="flex justify-end items-center gap-x-2">
-                                    <AiOutlineHeart /> <p>Spara</p>
+                                    <AiOutlineHeart className="text-[23px]" /> <p>Spara</p>
                                 </div>
                             </div>
 
                             <div>
-                                <h2 className="font-bold">Teknisk specifikation</h2>
-                                <ul>
+                                <h2 className="font-bold text-[14px]">Teknisk specifikation</h2>
+                                <ul className="pl-5 my-2">
                                     {product?.data?.product_properties_values.slice(0, 3).map((v) => (
-                                        <li className="list-disc">{v.value}</li>
+                                        <li className="list-disc text-[14px] py-2">{v.value}</li>
                                     ))}
                                 </ul>
 
-                                <button className="font-bold">Visa mer</button>
+                                <Link
+
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        setSections(prev => ({ ...prev, "specs": true }))
+                                        document.getElementById("specifications").scrollIntoView({
+                                            behavior: "smooth",
+                                            block: "start"
+                                        })
+
+                                    }}
+                                    className="font-bold text-[14px]">Visa mer</Link>
                             </div>
                         </div>
 
-                        <div className="hidden lg:flex flex-col justify-center gap-4 text-sm mt-6 border-[0.5px] bg-gray-50 rounded-lg shadow-sm p-6">
+                        <div className="hidden lg:flex flex-col justify-center gap-6 text-sm mt-6 border-[0.5px] bg-gray-50 rounded-lg shadow-sm p-6">
                             <p className="flex items-center gap-2 font-medium"><BsBagCheck className="text-[25px] text-purple-950" /> 60 dagars öppet köp</p>
                             <p className="flex items-center gap-2 font-medium"><MdOutlineSettingsBackupRestore className="text-[27px] text-purple-950" /> Gratis retur</p>
                         </div>
@@ -257,8 +274,10 @@ export const ProductDetails = () => {
             </div>
 
             <div>
-                <div className="py-8 border-y">
-                    <div className="px-12">
+                <div className="py-8 border-y"
+                    id="description"
+                >
+                    <div className="px-[80px]">
                         <h2
                             onClick={() => toggleSection("description")}
                             className="font-bold flex justify-between items-center">Produktbeskrivning
@@ -275,8 +294,10 @@ export const ProductDetails = () => {
                     </div>
                 </div>
 
-                <div className="py-8 border-y">
-                    <div className="px-12">
+                <div className="py-8 border-y mb-16"
+                    id="specifications"
+                >
+                    <div className="px-[80px]">
                         <h2
                             className="font-bold flex justify-between items-center"
                             onClick={() => toggleSection("specs")}
