@@ -188,7 +188,7 @@ export const ProductDetails = () => {
                                                 }
                                             </div>
                                             <Swiper
-                                                className="w-full h-full py-6"
+                                                
                                                 modules={[Pagination, Navigation, FreeMode, Zoom]}
                                                 spaceBetween={50}
                                                 slidesPerView={1}
@@ -203,7 +203,7 @@ export const ProductDetails = () => {
                                                 onSlideChange={(swiper) => {
                                                     setCurrentImage(swiper.realIndex + 1)
                                                 }}
-                                                className="[&_.swiper-pagination]:hidden w-full h-full"
+                                                className="[&_.swiper-pagination]:hidden w-full h-full py-6"
                                             >
                                                 {product?.data?.product_images?.map((image) => (
                                                     <SwiperSlide
