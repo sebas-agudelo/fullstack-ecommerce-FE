@@ -13,7 +13,7 @@ export const LatestItemsSlider = ({ children }) => {
         className="h-[350px] md:h-[450px]"
             modules={[Pagination, FreeMode, Mousewheel]}
             pagination={{ clickable: true }}
-            freeMode={true}
+            // freeMode={true}
             mousewheel={{
                 forceToAxis: true,
                 releaseOnEdges: true
