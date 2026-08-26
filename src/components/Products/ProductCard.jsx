@@ -8,7 +8,7 @@ export const ProductCard = ({ product }) => {
     const { add } = useAddCartItem();
     return (
         <div className="group relative h-[480px] overflow-hidden rounded-lg border mb-4 md:m-1 transition-all duration-150 xl:hover:shadow-md ease-in">
-            <Link to={``}>
+            <Link to={`/product/${product.id}`}>
                 <div className="relative w-full h-[225px] bg-gray-50 group">
                     <div className="h-full w-full overflow-hidden px-10 m-auto">
                         <img

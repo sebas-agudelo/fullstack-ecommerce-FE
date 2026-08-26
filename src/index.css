@@ -26,8 +26,8 @@ font-family: "Concert One", sans-serif;
   font-style: normal;
 }
 
-/* .swiper-pagination{
-  @apply absolute top-[50%] -translate-y-[50%]
+/* .swiper-wrapper{
+  @apply flex items-center
   
 } */
 
@@ -63,7 +63,7 @@ font-family: "Concert One", sans-serif;
 }
 
 .buttons{
-  @apply font-bold w-full text-white block h-[53px] flex justify-center items-center rounded-3xl hover:shadow-sm hover:shadow-purple-950/50 hover:font-normal transition-all duration-150 ease-in
+  @apply font-bold w-full text-white block h-[55px] flex justify-center items-center rounded-3xl hover:shadow-sm hover:shadow-purple-950/50 hover:font-normal transition-all duration-150 ease-in
 }
 
 .buttons-bg{
