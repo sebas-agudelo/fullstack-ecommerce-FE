@@ -59,7 +59,7 @@ export const ProductDetails = () => {
     };
 
     return (
-        <div className="max-w-[1440px] m-auto pt-4 lg:pt-8 bg-gray-50/50 pb-8">
+        <div className="max-w-[1440px] m-auto pt-4 lg:pt-8 bg-gray-50/40 pb-8">
             <div className="px-5 lg:px-[80px]">
                 <div className="h-full flex flex-col lg:flex-row justify-center items-center lg:items-start">
                     <div className="w-full lg:w-[63%] lg:pr-6">
