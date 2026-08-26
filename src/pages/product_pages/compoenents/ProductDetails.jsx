@@ -291,10 +291,10 @@ export const ProductDetails = () => {
                         </h2>
                         {
                             sections.description && (
-                                <>
+                                <div className="mt-8">
                                     <h1>{product?.data?.title}</h1>
                                     <p>{product?.data?.description}</p>
-                                </>
+                                </div>
                             )
                         }
                     </div>
@@ -311,17 +311,23 @@ export const ProductDetails = () => {
                             <IoIosArrowDown />
                         </h2>
 
-
+                        
                         {sections.specs &&
 
+                            
+                            (
 
-                            (product?.data?.product_properties_values?.map((v) => (
-                                <p>
-                                    {propertyLabels[v?.products_properties?.name] || v?.products_properties?.name}
+                                <div className="mt-8">
+                                    {  product?.data?.product_properties_values?.map((v) => (
+                                <p className="py-2">
+                                    <span className="font-extrabold">{propertyLabels[v?.products_properties?.name] || v?.products_properties?.name}</span>
                                     : {v?.value}
 
                                 </p>
-                            )))
+                            ))}
+                                </div>
+                                    
+                          )
 
                         }
                     </div>
