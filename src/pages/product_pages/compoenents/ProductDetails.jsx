@@ -224,7 +224,7 @@ export const ProductDetails = () => {
 
                     </div>
 
-                    <div className="lg:w-[37%] mb-8 lg:mb-0">
+                    <div className="w-full lg:w-[37%] mb-8 lg:mb-0">
                         <div className="bg-gray-100 rounded-lg shadow-sm border-[0.5px] pt-3 pb-6 px-4 lg:px-6">
                             <p className="text-[40px] font-extrabold mb-10">{formatPrice(product?.data.price)}:-</p>
                             <div className="mb-4 line-clamp-2 overflow-hidden text-gray-700">
@@ -279,7 +279,7 @@ export const ProductDetails = () => {
 
             </div>
 
-            <div className="">
+            <div className="w-full">
                 <div className="py-8 border-y"
                     id="description"
                 >
