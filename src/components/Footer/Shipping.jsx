@@ -13,9 +13,9 @@ export const Shipping = () => {
     return (
         <div className="flex flex-col justify-center md:flex-row md:justify-evenly px-4 py-4 md:py-8 bg-purple-950 text-white">
             {items.map((item) => (
-                <div key={item.text} className="flex md:flex-col md:justify-center items-center gap-4 md:gap-0 mb-2">
+                <div key={item.text} className="flex md:flex-col md:justify-center items-center gap-4 py-2 lg:py-0 md:gap-0 mb-2">
                     <item.icon className="text-xl md:text-3xl md:mb-4" />
-                    <p className="font-medium text-xs md:text-sm">{item.text}</p>
+                    <p className="font-medium text-[14.5px]">{item.text}</p>
                 </div>
             ))}
         </div>
