@@ -61,7 +61,7 @@ export const ProductDetails = () => {
     return (
         <div className="max-w-[1440px] m-auto bg-white">
             <div className="max-w-[1280px] m-auto pt-4 lg:pt-8 pb-8">
-                <div className="">
+              
                     <div className="h-full flex flex-col md:flex-row justify-center mb-6 xl:mb-10 px-4 lg:px-10">
                         <div className="w-full md:w-[55%] lg:w-[61%] md:pr-6">
                             <div className="h-auto">
@@ -211,7 +211,7 @@ export const ProductDetails = () => {
                                                                     <IoIosArrowBack className="text-[22px] text-white" />
                                                                 </button>
 
-                                                                <button className={`swiper-button-next-custom bg-purple-950 hidden lg:flex justify-center items-center h-[50px] w-[50px] shadow-md rounded-[50%] absolute left-[80%] -translate-x-[80%] !important top-1/2 -translate-y-1/2 z-10`}>
+                                                                <button className={`swiper-button-next-custom bg-purple-950 hidden lg:flex justify-center items-center h-[50px] w-[50px] shadow-md rounded-[50%] absolute right-[20%] translate-x-[20%] !important top-1/2 -translate-y-1/2 z-10`}>
                                                                     <IoIosArrowForward className="text-[22px] text-white" />
                                                                 </button>
                                                             </>
@@ -256,7 +256,7 @@ export const ProductDetails = () => {
 
                         </div>
 
-                        <div className="w-full md:w-[45%] lg:w-[39%] mb-8 lg:mb-0 bg-gray-100/50 rounded-md shadow-md">
+                        <div className="w-full md:w-[45%] lg:w-[39%] lg:mb-0 bg-gray-100/50 rounded-md shadow-md">
                             <div className="py-6 px-4 lg:px-6">
                                 <p className="text-[14px] text-gray-500">Modell: {product?.data?.brand}</p>
                                 <p className="text-[18px] lg:text-[27px] font-extrabold mb-4">{product?.data.title}</p>
@@ -312,7 +312,7 @@ export const ProductDetails = () => {
                         </div>
                     </div>
 
-                </div>
+            
 
                 <div className="w-full">
                     <div className="py-8 border-y"
