@@ -4,11 +4,11 @@ import { useAddCartItem } from "../../../hooks/Cart/useAddCartItem";
 import { formatPrice } from "../../../utils/formatPrice";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, FreeMode, Zoom } from "swiper/modules";
+import { Pagination, Navigation, Zoom } from "swiper/modules";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/free-mode';
+
 
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
@@ -59,9 +59,10 @@ export const ProductDetails = () => {
     };
 
     return (
-        <div className="max-w-[1440px] m-auto pt-4 lg:pt-8 bg-gray-50/40 pb-8">
-            <div className="px-5 lg:px-[80px]">
-                <div className="relative h-full flex flex-col lg:flex-row justify-center items-center lg:items-start mb-6 xl:mb-10">
+        <div className="max-w-[1440px] m-auto bg-white">
+            <div className="max-w-[1280px] m-auto pt-4 lg:pt-8 pb-8">          
+                  <div className="">
+                <div className="h-full flex flex-col lg:flex-row justify-center items-center lg:items-start mb-6 xl:mb-10 px-4 lg:px-10">
                     <div className="w-full lg:w-[61%] lg:pr-6">
                         <div className="h-auto">
                                 {/* <div className="lg:w-[70%] pb-6">
@@ -69,15 +70,29 @@ export const ProductDetails = () => {
                                     <p className="text-[18px] lg:text-[27px] font-extrabold">{product?.data.title}</p>
                                 </div> */}
 
-                            <div className="bg-gray-100/50 pb-4 rounded-md w-full h-auto lg:h-[545px] relative mb-8 lg:mb-12">
+                            <div className="relative pb-4 rounded-md w-full h-auto lg:h-[545px] mb-8 lg:mb-12">
                                 <div className="hidden lg:block">                                {
                                     product?.data?.product_images?.length > 1 && (
                                         <>
-                                            <button className={`swiper-button-prev-custom lg:flex justify-center items-center h-[50px] w-[50px] hover:shadow-lg hover:rounded-[50%] absolute left-[2%] -translate-x-[2%] top-1/2 -translate-y-1/2 ${isModalOpen ? "hidden" : "z-10"}`}>
-                                                <IoIosArrowBack className="text-[30px] text-purple-950" />
-                                            </button>
+                                          <button
+  className={`
+    swiper-button-prev-custom
+    hidden lg:flex
+    justify-center items-center
+    h-[50px] w-[50px]
+    hover:shadow-lg hover:rounded-[50%]
+    absolute
+    top-1/2 -translate-y-1/2
+    left-[2%] -translate-x-[2%]
+    ${isModalOpen ? "hidden" : "z-10"}
+  `}
+>
+  <IoIosArrowBack className="text-[30px] text-purple-950" />
+</button>
 
-                                            <button className={`swiper-button-next-custom lg:flex justify-center items-center h-[50px] w-[50px] hover:shadow-lg hover:rounded-[50%] absolute left-[98%] -translate-x-[98%] !important top-1/2 -translate-y-1/2 ${isModalOpen ? "hidden" : "z-10"}`}>
+
+                                            <button className={`swiper-button-next-custom lg:flex justify-center items-center h-[50px] w-[50px] hover:shadow-lg hover:rounded-[50%] absolute  top-1/2 -translate-y-1/2
+    right-[2%] translate-x-[2%] ${isModalOpen ? "hidden" : "z-10"}`}>
                                                 <IoIosArrowForward className="text-[30px] text-purple-950" />
                                             </button>
                                         </>
@@ -90,15 +105,11 @@ export const ProductDetails = () => {
                                     product?.data.product_images?.length > 1 ?
 
                                         <Swiper
-                                            modules={[Pagination, FreeMode, Navigation]}
+                                            modules={[Pagination, Navigation]}
                                             spaceBetween={50}
                                             slidesPerView={1}
-                                            pagination={{
-                                                clickable: true,
-
-                                            }}
+                                            pagination={{clickable: true}}
                                             loop={true}
-                                            // freeMode={true}
                                             navigation={{
                                                 prevEl: ".swiper-button-prev-custom",
                                                 nextEl: ".swiper-button-next-custom"
@@ -119,7 +130,7 @@ export const ProductDetails = () => {
                                                     >
                                                         <div className="w-full lg:w-[520px] xl:w-full h-full flex justify-center">
                                                             <img src={image.img} alt=""
-                                                                className="w-full lg:w-[85%] h-full object-contain pb-14" />
+                                                                className="w-full lg:w-[80%] h-full object-contain pb-14" />
                                                         </div>
 
                                                     </SwiperSlide>
@@ -212,10 +223,9 @@ export const ProductDetails = () => {
                                             </div>
                                             <Swiper
                                                 
-                                                modules={[Pagination, Navigation, FreeMode, Zoom]}
+                                                modules={[Pagination, Navigation, Zoom]}
                                                 spaceBetween={50}
                                                 slidesPerView={1}
-                                                // freeMode={true}
                                                 Zoom={true}
                                                 loop={true}
                                                 pagination={{ clickable: true }}
@@ -247,8 +257,8 @@ export const ProductDetails = () => {
 
                     </div>
 
-                    <div className="w-full lg:w-[39%] mb-8 lg:mb-0">
-                        <div className=" rounded-md shadow-md pt-3 pb-6 px-4 lg:px-6">
+                    <div className="w-full lg:w-[39%] mb-8 lg:mb-0 bg-gray-100/50 rounded-md shadow-md">
+                        <div className="py-6 px-4 lg:px-6">
                                 <p className="text-[14px] text-gray-500">Modell: {product?.data?.brand}</p>
                                 <p className="text-[18px] lg:text-[27px] font-extrabold mb-4">{product?.data.title}</p>
                             <p className="text-[40px] font-extrabold mb-10">{formatPrice(product?.data.price)}:-</p>
@@ -309,7 +319,7 @@ export const ProductDetails = () => {
                 <div className="py-8 border-y"
                     id="description"
                 >
-                    <div className="px-6 lg:px-[80px]">
+                    <div className="px-4 lg:px-10">
                         <h2
                             onClick={() => toggleSection("description")}
                             className="font-bold flex justify-between items-center">Produktbeskrivning
@@ -329,7 +339,7 @@ export const ProductDetails = () => {
                 <div className="py-8 border-y"
                     id="specifications"
                 >
-                    <div className="px-6 lg:px-[80px]">
+                    <div className="px-4 lg:px-10">
                         <h2
                             className="font-bold flex justify-between items-center"
                             onClick={() => toggleSection("specs")}
@@ -360,5 +370,7 @@ export const ProductDetails = () => {
                 </div>
             </div>
         </div>
+        </div>
+
     )
 }

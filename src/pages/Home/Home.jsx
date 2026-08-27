@@ -7,7 +7,7 @@ import { Footer } from "../../components/Footer/Footer";
 export default function Home() {
   return (
     <>
-      <main className="home">
+      <main className="home bg-white">
         <PopularProducts />
         <PromoBanner />
         <Latest />

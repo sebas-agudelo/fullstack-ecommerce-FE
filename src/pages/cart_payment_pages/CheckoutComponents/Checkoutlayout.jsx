@@ -12,7 +12,7 @@ export const CheckoutLayout = ({ customerData, setCustomerData, costumer, refetc
     const [isOrderSummaryOpen, setIsOrderSummaryOpen] = useState(false)
 
     return (
-        <div className="max-w-5xl m-auto pt-6 px-4 relative">
+        <div className="max-w-5xl m-auto pt-6 px-4 relative bg-white">
             <CheckoutHeader />
 
             <MainErrors errors={errors} />

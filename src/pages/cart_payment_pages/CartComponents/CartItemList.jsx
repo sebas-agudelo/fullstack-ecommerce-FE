@@ -20,7 +20,7 @@ export const CartItemList = () => {
                         <div className="flex flex-col justify-center w-[calc(100%_-_80px)] lg:w-[calc(100%_-_100px)]">
                             <div className="">
                                 <p className="text-[14px] font-extrabold mb-1">{item.product_title}</p>
-                                <p className="text-xs text-gray-700">{item.short_description}</p>
+                                <p className="text-xs text-gray-700 truncate md:w-[45%]">{item.short_description}</p>
                             </div>
                         </div>
                     </div>

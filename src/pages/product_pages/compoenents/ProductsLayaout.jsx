@@ -6,7 +6,7 @@ import ContentSpinner from "../../../components/spinners/ContentSpinner"
 export const ProductsLayout = ({ data, page, urlPage, handlePageChange, pages, isLoading, isError, error }) => {
     return (
         <>
-            <main className="pb-8">
+            <main className="max-w-[1440px] m-auto pb-8 bg-white">
                 {isLoading && !isError && (<ContentSpinner />)}
 
                 <ProductsList data={data} />

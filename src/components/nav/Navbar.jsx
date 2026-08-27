@@ -23,10 +23,10 @@ export default function Navbar() {
   return (
     <header>
       {!hideNavbar && (
-        <nav className="w-full bg-white">
+        <nav className="w-full shadow-sm shadow-black/10 relative bg-white">
           <TopBar />
 
-          <div className="menu lg:h-[96px] flex flex-col justify-evenly px-4 lg:px-8 py-6 lg:py-0 shadow-sm">
+          <div className="menu lg:h-[96px] flex flex-col justify-evenly px-4 lg:px-8 py-6 lg:py-0">
             <div className="flex justify-between items-center">
               <div className="flex items-center space-x-3 md:space-x-6">
                 <NavbarMenu />
