@@ -61,15 +61,15 @@ export const ProductDetails = () => {
     return (
         <div className="max-w-[1440px] m-auto pt-4 lg:pt-8 bg-gray-50/40 pb-8">
             <div className="px-5 lg:px-[80px]">
-                <div className="h-full flex flex-col lg:flex-row justify-center items-center lg:items-start">
-                    <div className="w-full lg:w-[63%] lg:pr-6">
+                <div className="relative h-full flex flex-col lg:flex-row justify-center items-center lg:items-start mb-6 xl:mb-10">
+                    <div className="w-full lg:w-[61%] lg:pr-6">
                         <div className="h-auto">
-                            <div className="lg:w-[70%] pb-6">
-                                <p className="text-[14px] text-gray-500">Modell: Zenbook</p>
-                                <p className="text-[18px] lg:text-[27px] font-extrabold">{product?.data.title}</p>
-                            </div>
+                                {/* <div className="lg:w-[70%] pb-6">
+                                    <p className="text-[14px] text-gray-500">Modell: {product?.data?.brand}</p>
+                                    <p className="text-[18px] lg:text-[27px] font-extrabold">{product?.data.title}</p>
+                                </div> */}
 
-                            <div className="h-auto lg:h-[545px] relative mb-8 lg:mb-12">
+                            <div className="bg-gray-100/50 pb-4 rounded-md w-full h-auto lg:h-[545px] relative mb-8 lg:mb-12">
                                 <div className="hidden lg:block">                                {
                                     product?.data?.product_images?.length > 1 && (
                                         <>
@@ -117,9 +117,9 @@ export const ProductDetails = () => {
                                                         }}
                                                         className="h-full flex justify-center items-end"
                                                     >
-                                                        <div className="w-full h-full">
+                                                        <div className="w-full lg:w-[520px] xl:w-full h-full flex justify-center">
                                                             <img src={image.img} alt=""
-                                                                className="w-full h-full object-contain pb-14" />
+                                                                className="w-full lg:w-[85%] h-full object-contain pb-14" />
                                                         </div>
 
                                                     </SwiperSlide>
@@ -134,10 +134,10 @@ export const ProductDetails = () => {
                                             className="w-[70%] h-[90%] m-auto object-contain" />
                                 }
                             </div>
-
-                            <div className="w-full lg:w-[50%] mb-8">
-                                <h2 className="text-[20px] font-extrabold mb-3">Kort om produkten</h2>
-                                <p className="mb-3">{product?.data?.short_description ? product?.data?.short_description : "-"}</p>
+<div className="">
+                            <div className=" mb-8">
+                                <h2 className="text-[18px] font-extrabold mb-3">Kort om produkten</h2>
+                                <p className="mb-3 line-clamp-3">{product?.data?.short_description ? product?.data?.short_description : "-"}</p>
                                 <Link
                                     to="#description"
                                     onClick={(e) => {
@@ -152,6 +152,29 @@ export const ProductDetails = () => {
                                 >
                                     Visa mer
                                 </Link>
+                            </div>
+
+                             {/* <div className="flex-[0_0_50%]">
+                                <h2 className="text-[20px] font-extrabold mb-3">Teknisk specifikation</h2>
+                                <ul className="pl-5 my-2">
+                                    {product?.data?.product_properties_values.slice(0, 3).map((v) => (
+                                        <li className="list-disc pb-2">{v.value}</li>
+                                    ))}
+                                </ul>
+
+                                <Link
+
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        setSections(prev => ({ ...prev, "specs": true }))
+                                        document.getElementById("specifications").scrollIntoView({
+                                            behavior: "smooth",
+                                            block: "start"
+                                        })
+
+                                    }}
+                                    className="font-bold text-[14px]">Visa mer</Link>
+                            </div> */}
                             </div>
 
 
@@ -224,8 +247,10 @@ export const ProductDetails = () => {
 
                     </div>
 
-                    <div className="w-full lg:w-[37%] mb-8 lg:mb-0">
-                        <div className="bg-gray-100 rounded-lg shadow-sm border-[0.5px] pt-3 pb-6 px-4 lg:px-6">
+                    <div className="w-full lg:w-[39%] mb-8 lg:mb-0">
+                        <div className=" rounded-md shadow-md pt-3 pb-6 px-4 lg:px-6">
+                                <p className="text-[14px] text-gray-500">Modell: {product?.data?.brand}</p>
+                                <p className="text-[18px] lg:text-[27px] font-extrabold mb-4">{product?.data.title}</p>
                             <p className="text-[40px] font-extrabold mb-10">{formatPrice(product?.data.price)}:-</p>
                             <div className="mb-4 line-clamp-2 overflow-hidden text-gray-700">
                                 <p className="text-[14px] font-medium">{product?.data?.short_description}</p>
@@ -246,11 +271,11 @@ export const ProductDetails = () => {
                                 </div>
                             </div>
 
-                            <div>
-                                <h2 className="font-bold text-[14px]">Teknisk specifikation</h2>
+                            <div className="mb-6 border-b pb-6 border-purple-950">
+                                <h2 className="font-bold text-[14.5px]">Teknisk specifikation</h2>
                                 <ul className="pl-5 my-2">
                                     {product?.data?.product_properties_values.slice(0, 3).map((v) => (
-                                        <li className="list-disc text-[14px] py-2">{v.value}</li>
+                                        <li className="list-disc text-[14.5px] py-2">{v.value}</li>
                                     ))}
                                 </ul>
 
@@ -267,13 +292,14 @@ export const ProductDetails = () => {
                                     }}
                                     className="font-bold text-[14px]">Visa mer</Link>
                             </div>
-                        </div>
-
-                        <div className="flex flex-col justify-center gap-4 text-sm mt-6 border-[0.5px] bg-gray-100 rounded-lg shadow-sm px-6 py-4">
+                            
+                        <div className="flex flex-col justify-center gap-4 text-[14.5px]">
                             <p className="flex items-center gap-2 font-medium"><IoCardOutline className="text-[25px] text-purple-950" /> Säker betalning</p>
                             <p className="flex items-center gap-2 font-medium"><BsBagCheck className="text-[25px] text-purple-950" /> 60 dagars öppet köp</p>
                             <p className="flex items-center gap-2 font-medium"><MdOutlineSettingsBackupRestore className="text-[25px] text-purple-950" /> Gratis retur</p>
                         </div>
+                        </div>
+
                     </div>
                 </div>
 
