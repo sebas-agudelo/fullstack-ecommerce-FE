@@ -4,43 +4,18 @@ import { Pagination, Navigation, Zoom } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
+import { MdClose } from "react-icons/md";
+import { SliderButtons } from './SliderButtons';
 
-export const ProductDetailsSlider = ({ product }) => {
+export const ProductDetailsSlider = ({ product, isModalOpen, setISModalOpen, setCurrentImage }) => {
     return (
-
         <div className="relative pb-4 rounded-md w-full h-auto lg:h-[545px] mb-8 lg:mb-12 bg-gray-50/20">
-            <div className="hidden lg:block">                                {
-                product?.data?.product_images?.length > 1 && (
-                    <>
-                        <button
-                            className={`
-            swiper-button-prev-custom
-            hidden lg:flex
-            justify-center items-center
-            h-[50px] w-[50px]
-            hover:shadow-lg hover:rounded-[50%]
-            absolute
-            top-1/2 -translate-y-1/2
-            left-[2%] -translate-x-[2%]
-            ${isModalOpen ? "hidden" : "z-10"}
-          `}
-                        >
-                            <IoIosArrowBack className="text-[30px] text-purple-950" />
-                        </button>
+            <div className={`${isModalOpen && "hidden"}`}>
+            <SliderButtons product={product} L={"3%"} R={"3%"} isModalOpen={isModalOpen}/>
 
-
-                        <button className={`
-                        swiper-button-next-custom lg:flex justify-center items-center h-[50px] w-[50px] hover:shadow-lg hover:rounded-[50%] absolute  top-1/2 -translate-y-1/2
-            right-[2%] translate-x-[2%] ${isModalOpen ? "hidden" : "z-10"}
-            `}>
-                            <IoIosArrowForward className="text-[30px] text-purple-950" />
-                        </button>
-                    </>
-                )
-            }
             </div>
-
-
             {
                 product?.data.product_images?.length > 1 ?
 
@@ -83,7 +58,8 @@ export const ProductDetailsSlider = ({ product }) => {
 
                     :
 
-                    <div className="w-full lg:w-[75%] xl:w-[80%] h-full flex justify-center">
+                    <div
+                        className="w-full lg:w-[75%] xl:w-[80%] h-full flex justify-center">
                         <img src={product?.data?.img} alt=""
                             className="w-full h-[90%] m-auto object-contain" />
                     </div>

@@ -28,7 +28,7 @@ export const Search = () => {
 
         <div className="w-full">
             <form onSubmit={handleSubmit} className="w-full relative">
-                <input type="text" onChange={(e) => setQuery(e.target.value)} value={query} placeholder="Sök produkter..." className="bg-gray-50 w-full py-[7px] pl-12 pr-5 rounded-2xl border-[1px] border-gray-100 relative lg:hover:border-purple-900 lg:hover:border-[1.5px] focus:outline-none placeholder-gray-950 placeholder:text-[14.5px] shadow-sm duration-150 translate-border" />
+                <input type="text" onChange={(e) => setQuery(e.target.value)} value={query} placeholder="Sök produkter..." className="bg-gray-100 w-full py-[7px] pl-12 pr-5 rounded-2xl border-[1px] border-gray-100 relative lg:hover:border-purple-900 lg:hover:border-[1.5px] focus:outline-none placeholder-gray-950 placeholder:text-[14.5px] shadow-sm duration-150 translate-border" />
                 <IoIosSearch className="absolute top-1/2 transform -translate-y-1/2 left-[2%] -translate-x[2%] text-2xl" />
             </form>
         </div>
