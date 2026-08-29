@@ -1,7 +1,5 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "../pages/Home/Home"
-// import About from "../pages/About"
-// import Contact from "../pages/Contact"
 import Cart from "../pages/cart_payment_pages/Cart"
 import { CheckoutPage } from "../pages/cart_payment_pages/Checkout"
 import GetProduct from "../pages/product_pages/GetProduct"
@@ -13,7 +11,6 @@ import PaymentStatus from "../pages/cart_payment_pages/PaymentStatus"
 
 import { Protected } from "../routes/protected"
 import { Redirected } from "./Redirected"
-import { GetUserOrders } from "../pages/auth/GetUserOrders"
 import PageNotFound from "../pages/PageNotFound";
 
 
@@ -33,13 +30,7 @@ export const AppRoutes = () => {
                     <SignIn />
                 </Redirected>}
             />
-            <Route
-                path="/beställningar" element={
-                    <Protected>
-                        <GetUserOrders />
-                    </Protected>
-                }
-            />
+         
             <Route path="/konto" element={
                 <Protected>
                     <Profile />
