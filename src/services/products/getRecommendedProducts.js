@@ -4,13 +4,13 @@ const supabase = supabase_config();
 export const getRecommendedProducts = async (productId) => {
 
     console.log("Hola");
-    
-    const { data: product, error: productError } = await supabase
-    .from("products_duplicate")
-    .select("id, category_id, sub_category_id, brand, price")
-    .eq("id", productId)
-    .single();
-                
+
+    const { data: product } = await supabase
+        .from("products_duplicate")
+        .select("id, category_id, sub_category_id, brand, price")
+        .eq("id", productId)
+        .single();
+
     let query = supabase
         .from("products_duplicate")
         .select(`id, brand, title, price, category_name, category_id, sub_category_id, color, short_description, img, 
@@ -26,8 +26,8 @@ export const getRecommendedProducts = async (productId) => {
         .limit(10)
 
 
-        
-    const { data, count, error } = await query;
+
+    const { data } = await query;
 
     return { data };
 }   
