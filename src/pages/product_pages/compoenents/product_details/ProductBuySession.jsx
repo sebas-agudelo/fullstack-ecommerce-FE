@@ -15,7 +15,7 @@ export const ProductBuySession = ({ product, setSections }) => {
         <div className="w-full md:w-[45%] lg:w-[39%] lg:mb-0 bg-gray-200/50 border rounded-md shadow-md">
             <div className="py-6 px-4 lg:px-6">
                 <p className="text-[14.5px] text-gray-500">Modell: {product?.data?.brand}</p>
-                <p className="text-[18px] lg:text-[27px] font-extrabold mb-4">{product?.data.title}</p>
+                <p className="text-[18px] text-gray-950/80 lg:text-[27px] font-extrabold mb-4">{product?.data.title}</p>
                 <p className="text-[40px] font-extrabold mb-10">{formatPrice(product?.data.price)}:-</p>
                 <div className="mb-4 line-clamp-2 overflow-hidden text-gray-700">
                     <p className="text-[14.5px] font-medium">{product?.data?.short_description}</p>

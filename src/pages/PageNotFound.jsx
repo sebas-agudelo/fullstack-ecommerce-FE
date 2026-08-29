@@ -1,11 +1,11 @@
 export default function PageNotFound() {
   return (
     <>
-      <div className="not-found-container">
-        <h1>SIDAN HITTADES INTE</h1>
-        <p>Sidan du letar efter är för närvarande inte tillgänglig.</p>
+      <div className="h-screen flex flex-col items-center pt-16">
+        <h1 className="text-2xl font-medium mb-2">SIDAN HITTADES INTE</h1>
+        <p className="mb-8">Sidan du letar efter är för närvarande inte tillgänglig.</p>
 
-        <a href="/products">Alla våra produkter</a>
+        <a className="font-bold underline" href="/products">Se våra produkter</a>
       </div>
     </>
   );

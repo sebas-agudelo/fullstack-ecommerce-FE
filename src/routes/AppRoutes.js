@@ -21,8 +21,6 @@ export const AppRoutes = () => {
     return (
         <Routes >
             <Route path="/" element={<Home />} />
-            {/* <Route path="/om-oss" element={<About />} />
-            <Route path="/kontakta-oss" element={<Contact />} /> */}
 
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<CheckoutPage />} />
@@ -52,10 +50,6 @@ export const AppRoutes = () => {
             <Route path="/confirm" element={<PaymentStatus />} />
 
             <Route path="*" element={<PageNotFound />} />
-
-            {/* <Route path="/search?query" /> */}
-
-            {/* <Route path="*" element={<PageNotFound />} /> */}
         </Routes>
     )
 }

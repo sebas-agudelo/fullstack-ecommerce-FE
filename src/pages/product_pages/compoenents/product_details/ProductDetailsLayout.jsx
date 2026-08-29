@@ -3,6 +3,7 @@ import { ProductBuySession } from "./ProductBuySession"
 import { ProductInfoSection } from "./ProductInfoSection"
 import ContentSpinner from "../../../../components/spinners/ContentSpinner";
 import { ProductGalleryModal } from "./ProductGalleryModal";
+import { RecommendedProducts } from "./RecommendedProducts";
 
 export const ProductDetailsLayout = ({
     product,
@@ -47,8 +48,12 @@ export const ProductDetailsLayout = ({
                         setSections={setSections}
                         product={product}
                     />
+
+                    <RecommendedProducts />
+
                 </div>
             }
+
         </div>
     )
 }
