@@ -1,12 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, Zoom } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
-import { MdClose } from "react-icons/md";
 import { SliderButtons } from './SliderButtons';
 
 export const ProductDetailsSlider = ({ product, isModalOpen, setISModalOpen, setCurrentImage }) => {

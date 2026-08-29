@@ -23,7 +23,6 @@ export const ProductDetailsLayout = ({
                             product={product}
                             isModalOpen={isModalOpen}
                             setISModalOpen={setISModalOpen}
-                            currentImage={currentImage}
                             setCurrentImage={setCurrentImage}
                             setSections={setSections}
                             currentImage={currentImage}

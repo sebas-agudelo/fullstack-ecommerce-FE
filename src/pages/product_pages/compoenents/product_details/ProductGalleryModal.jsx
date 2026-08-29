@@ -5,8 +5,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { MdClose } from "react-icons/md";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
 import { SliderButtons } from './SliderButtons';
 
 export const ProductGalleryModal = ({ product, isModalOpen, setISModalOpen, currentImage, setCurrentImage }) => {

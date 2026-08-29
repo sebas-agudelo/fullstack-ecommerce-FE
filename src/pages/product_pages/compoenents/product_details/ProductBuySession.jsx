@@ -1,8 +1,7 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { formatPrice } from "../../../../utils/formatPrice";
 import { AiOutlineHeart } from "react-icons/ai";
-import { IoIosArrowBack } from "react-icons/io";
 import { IoCardOutline } from "react-icons/io5";
 import { BsBagCheck } from "react-icons/bs";
 import { MdOutlineSettingsBackupRestore } from "react-icons/md";
