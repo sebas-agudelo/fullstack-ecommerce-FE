@@ -13,13 +13,13 @@ export const ProductBuySession = ({ product, setSections }) => {
     const { add } = useAddCartItem();
 
     return (
-        <div className="w-full md:w-[45%] lg:w-[39%] lg:mb-0 bg-gray-100/50 rounded-md shadow-md">
+        <div className="w-full md:w-[45%] lg:w-[39%] lg:mb-0 bg-gray-200/50 border rounded-md shadow-md">
             <div className="py-6 px-4 lg:px-6">
-                <p className="text-[14px] text-gray-500">Modell: {product?.data?.brand}</p>
+                <p className="text-[14.5px] text-gray-500">Modell: {product?.data?.brand}</p>
                 <p className="text-[18px] lg:text-[27px] font-extrabold mb-4">{product?.data.title}</p>
                 <p className="text-[40px] font-extrabold mb-10">{formatPrice(product?.data.price)}:-</p>
                 <div className="mb-4 line-clamp-2 overflow-hidden text-gray-700">
-                    <p className="text-[14px] font-medium">{product?.data?.short_description}</p>
+                    <p className="text-[14.5px] font-medium">{product?.data?.short_description}</p>
                 </div>
 
 
@@ -56,13 +56,13 @@ export const ProductBuySession = ({ product, setSections }) => {
                             })
 
                         }}
-                        className="font-bold text-[14px]">Visa mer</Link>
+                        className="font-bold text-[14.5px]">Visa mer</Link>
                 </div>
 
                 <div className="flex flex-col justify-center gap-4 text-[14.5px]">
-                    <p className="flex items-center gap-2 font-medium"><IoCardOutline className="text-[25px] text-purple-950" /> Säker betalning</p>
-                    <p className="flex items-center gap-2 font-medium"><BsBagCheck className="text-[25px] text-purple-950" /> 60 dagars öppet köp</p>
-                    <p className="flex items-center gap-2 font-medium"><MdOutlineSettingsBackupRestore className="text-[25px] text-purple-950" /> Gratis retur</p>
+                    <p className="flex items-center gap-2 font-medium"><IoCardOutline className="text-[25px] text-purple-950/60" /> Säker betalning</p>
+                    <p className="flex items-center gap-2 font-medium"><BsBagCheck className="text-[25px] text-purple-950/60" /> 60 dagars öppet köp</p>
+                    <p className="flex items-center gap-2 font-medium"><MdOutlineSettingsBackupRestore className="text-[25px] text-purple-950/60" /> Gratis retur</p>
                 </div>
             </div>
 
