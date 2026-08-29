@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Signuot } from '../../components/Signout';
 
 export default function Profile() {
