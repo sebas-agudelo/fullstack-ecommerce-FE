@@ -54,7 +54,7 @@ export const ProductGalleryModal = ({ product, isModalOpen, setISModalOpen, curr
                                         <SwiperSlide
                                             className="flex justify-center items-center h-full w-full"
                                         >
-                                            <div className="w-full lg:w-[45%] h-full flex justify-center pb-8">
+                                            <div className="w-full lg:w-[46%] h-full flex justify-center pb-8">
                                                 <img
                                                     className="w-full h-auto object-contain"
                                                     src={image.img} alt="" />
