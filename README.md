@@ -1,4 +1,4 @@
-<img width="546" height="1206" alt="Skärmbild 2026-10-17 165120" src="https://github.com/user-attachments/assets/f558daa7-7312-437e-9138-d83ac6c1a4ea" />Fullstack E-handel
+Fullstack E-handel
 
 En fullstack-webbutik byggd med React, JavaScript, Node/Express.js
 
@@ -28,6 +28,7 @@ Frontend är utvecklad i React och kommunicerar med ett REST API byggt med Node/
 
 ## Bilder
 <img width="2524" height="1186" alt="Skärmbild 2026-10-17 164955" src="https://github.com/user-attachments/assets/fbc353e2-138d-4b52-a299-0ee088630992" />
+<img width="2166" height="1260" alt="Skärmbild 2026-10-17 165819" src="https://github.com/user-attachments/assets/31836114-9952-4644-b54e-f634e380934a" />
 <img width="538" height="1204" alt="Skärmbild 2026-10-17 165104" src="https://github.com/user-attachments/assets/8b214d55-df5c-47be-b32e-7baad322e75a" />
 <img width="546" height="1206" alt="Skärmbild 2026-10-17 165120" src="https://github.com/user-attachments/assets/290cde45-3aae-4edf-82f3-7d958d0753fe" />
 
