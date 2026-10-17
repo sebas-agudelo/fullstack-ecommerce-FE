@@ -22,9 +22,16 @@ En fullstack-webbutik byggd med React, JavaScript, Node/Express.js
 
 ## Om projektet
 
-Projektet är en fullstackbaserad e-handelslösning där användare kan utforska och söka bland produkter, hantera sin kundvagn och genomföra köp. Lösningen stödjer både inloggade användare och gäster, med ett checkout-flöde integrerat med Stripe för betalningshantering.
+Projektet är en fullstack e-handel där användare kan utforska och söka bland produkter, hantera sin kundvagn och genomföra köp. Lösningen stödjer både inloggade användare och gäster, med ett checkout flöde integrerat med Stripe för betalningshantering.
 
-Frontend är utvecklad i React och kommunicerar med ett REST API byggt med Node/Express.js. Supabase och PostgreSQL används för datalagring och autentisering, medan Stripe hanterar betalningsflödet. React Query används för datahämtning och cachelagring, vilket minskar onödiga API-anrop och gör att tidigare hämtad data kan återanvändas vid navigering mellan sidor.
+Frontend är utvecklad i React och kommunicerar med ett REST API byggt med Node/Express.js. Supabase och PostgreSQL används för datalagring och autentisering, medan Stripe hanterar betalningsflödet. 
+
+React Query används för datahämtning och cachelagring, vilket minskar onödiga API-anrop och gör att tidigare hämtad data kan återanvändas vid navigering mellan sidor.
+
+## Utmaningar
+En av utmaningarna var t.ex när data hanteras vid paginering. När användaren navigerade från sida .tex 1 till sida 2 och sedan tillbaka till sida 1 behövde produktdatan hämtas på nytt, trots att den redan hade hämtats tidigare.
+
+För att lösa detta implementerade jag TanStack Query (React Query), som cachar produktdata för respektive sida och gör det möjligt att återanvända tidigare hämtade resultat vid navigering. Det minskar onödiga API-anrop och gör att loading spinner endast behöver visas vid den första datahämtningen. När användaren återvänder till en sida kan den cachade datan visas direkt, vilket ger en snabbare och smidigare användarupplevelse.
 
 ## Bilder
 <img width="2524" height="1186" alt="Skärmbild 2026-10-17 164955" src="https://github.com/user-attachments/assets/fbc353e2-138d-4b52-a299-0ee088630992" />
