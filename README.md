@@ -1,4 +1,4 @@
-Fullstack E-handel
+<img width="546" height="1206" alt="Skärmbild 2026-10-17 165120" src="https://github.com/user-attachments/assets/f558daa7-7312-437e-9138-d83ac6c1a4ea" />Fullstack E-handel
 
 En fullstack-webbutik byggd med React, JavaScript, Node/Express.js
 
@@ -27,5 +27,8 @@ Projektet är en fullstackbaserad e-handelslösning där användare kan utforska
 Frontend är utvecklad i React och kommunicerar med ett REST API byggt med Node/Express.js. Supabase och PostgreSQL används för datalagring och autentisering, medan Stripe hanterar betalningsflödet. React Query används för datahämtning och cachelagring, vilket minskar onödiga API-anrop och gör att tidigare hämtad data kan återanvändas vid navigering mellan sidor.
 
 ## Bilder
-<img width="538" height="1204" alt="Skärmbild 2026-10-17 165104" src="https://github.com/user-attachments/assets/8b214d55-df5c-47be-b32e-7baad322e75a" />
 <img width="2524" height="1186" alt="Skärmbild 2026-10-17 164955" src="https://github.com/user-attachments/assets/fbc353e2-138d-4b52-a299-0ee088630992" />
+<img width="538" height="1204" alt="Skärmbild 2026-10-17 165104" src="https://github.com/user-attachments/assets/8b214d55-df5c-47be-b32e-7baad322e75a" />
+<img width="546" height="1206" alt="Skärmbild 2026-10-17 165120" src="https://github.com/user-attachments/assets/290cde45-3aae-4edf-82f3-7d958d0753fe" />
+
+
