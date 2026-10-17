@@ -13,10 +13,11 @@ En fullstack-webbutik byggd med React, JavaScript, Node/Express.js
 
 ## Teknikstack
 
-- **Frontend:** React, React query, JavaScript,  Tailwind CSS och Swiper
-- **Backend:** Node/Express.js, JavaScript, Zod
+- **Språk och verktyg: ** JavaScript och Zod
+- **Frontend:** React, React query, Tailwind CSS och Swiper
+- **Backend:** Node/Express.js
 - **Databas och autentisering:** Supabase, PostgreSQL
-- **Betalningar:** Stripe
+- **Betalningar:** Stripe och stripe webhook
 - **Driftsättning:** Vercel (frontend), Render (backend)
 
 ## Om projektet
