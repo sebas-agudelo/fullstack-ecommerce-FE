@@ -29,7 +29,7 @@ Frontend är utvecklad i React och kommunicerar med ett REST API byggt med Node/
 React Query används för datahämtning och cachelagring, vilket minskar onödiga API-anrop och gör att tidigare hämtad data kan återanvändas vid navigering mellan sidor.
 
 ## Utmaningar
-En av utmaningarna var t.ex när data hanteras vid paginering. När användaren navigerade från sida .tex 1 till sida 2 och sedan tillbaka till sida 1 behövde produktdatan hämtas på nytt, trots att den redan hade hämtats tidigare.
+En av utmaningarna var t.ex när data hanteras vid paginering. När användaren navigerade från sida t.ex 1 till sida 2 och sedan tillbaka till sida 1 behövde produktdatan hämtas på nytt, trots att den redan hade hämtats tidigare.
 
 För att lösa detta implementerade jag TanStack Query (React Query), som cachar produktdata för respektive sida och gör det möjligt att återanvända tidigare hämtade resultat vid navigering. Det minskar onödiga API-anrop och gör att loading spinner endast behöver visas vid den första datahämtningen. När användaren återvänder till en sida kan den cachade datan visas direkt, vilket ger en snabbare och smidigare användarupplevelse.
 
